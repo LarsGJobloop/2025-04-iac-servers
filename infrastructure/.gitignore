@@ -1,3 +1,6 @@
 .terraform
 *.tfvars
 *tfstate*
+
+.server-demo-key
+.server-demo-key.pub
