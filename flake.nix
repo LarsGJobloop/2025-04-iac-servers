@@ -33,7 +33,14 @@
         default = pkgs.mkShell {
           packages = [
             pkgs.terraform
+            pkgs.dotnetCorePackages.sdk_9_0 # Program Development
           ];
+        };
+        
+        # Development Environment Variables
+        env = {
+          # Required for VS Code extensions .NET
+          DOTNET_ROOT = builtins.toString pkgs.dotnetCorePackages.sdk_9_0;
         };
       });
 
